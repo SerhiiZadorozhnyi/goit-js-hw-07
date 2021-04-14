@@ -8,6 +8,10 @@ createElemBtn.addEventListener('click', createBoxes);
 function createBoxes() {
     const size = 30;
     
+    // for (const 123 of 1234) {
+
+    // }
+
     for (let i = 0; i < input.value; i += 1) {   
     const max = 256;
     let red = Math.floor(Math.random() * max);

@@ -11,7 +11,7 @@ const decrement = () => {
 }
 
 const increment = () => {
-    currentCounterValue += Number(incrementBtn.textContent);
+    currentCounterValue += 1;
     counterValue.textContent = currentCounterValue;
 }
 

@@ -1,11 +1,16 @@
-const input = document.querySelector('#validation-input');
+const input = document.querySelector("#validation-input");
+const data = +input.dataset.length;
 
-input.addEventListener('blur', onInputBlur);
+const onBlur = (event) => {
+  const inputLength = event.currentTarget.value.length;
 
-function onInputBlur() {
-    if (input.value.length >= +input.dataset.length) {
-        input.classList.add('valid');
-    } else {
-        input.classList.add('invalid');
-    }
-}
+  if (data === inputLength) {
+    input.classList.add("valid");
+    input.classList.remove("invalid");
+  } else {
+    input.classList.add("invalid");
+    input.classList.remove("valid");
+  }
+};
+
+input.addEventListener("blur", onBlur);
